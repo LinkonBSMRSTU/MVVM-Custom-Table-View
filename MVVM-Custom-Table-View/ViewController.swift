@@ -22,7 +22,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        tableView.register(CustomTableViewCell.nib(), forCellReuseIdentifier: CustomTableViewCell.cellIdentifier)
+       
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -33,12 +35,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.cellIdentifier, for: indexPath) as! CustomTableViewCell
         
         let model = data[indexPath.row]
         let viewModel = CellViewModel(firstName: model.firstName, lastName: model.lastName)
+        cell.configureCell(with: viewModel)
         
-        cell.textLabel?.text = "\(viewModel.firstName) \(viewModel.lastName)"
         return cell
     }
     

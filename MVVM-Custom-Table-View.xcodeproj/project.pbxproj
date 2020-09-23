@@ -13,6 +13,8 @@
 		4FA57AEB251B4CFC000F9DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FA57AE9251B4CFC000F9DF4 /* Main.storyboard */; };
 		4FA57AED251B4CFF000F9DF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA57AEC251B4CFF000F9DF4 /* Assets.xcassets */; };
 		4FA57AF0251B4CFF000F9DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FA57AEE251B4CFF000F9DF4 /* LaunchScreen.storyboard */; };
+		4FA57AF9251B52D6000F9DF4 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA57AF7251B52D6000F9DF4 /* CustomTableViewCell.swift */; };
+		4FA57AFA251B52D6000F9DF4 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA57AF8251B52D6000F9DF4 /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4FA57AEC251B4CFF000F9DF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FA57AEF251B4CFF000F9DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FA57AF1251B4CFF000F9DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FA57AF7251B52D6000F9DF4 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		4FA57AF8251B52D6000F9DF4 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				4FA57AEC251B4CFF000F9DF4 /* Assets.xcassets */,
 				4FA57AEE251B4CFF000F9DF4 /* LaunchScreen.storyboard */,
 				4FA57AF1251B4CFF000F9DF4 /* Info.plist */,
+				4FA57AF7251B52D6000F9DF4 /* CustomTableViewCell.swift */,
+				4FA57AF8251B52D6000F9DF4 /* CustomTableViewCell.xib */,
 			);
 			path = "MVVM-Custom-Table-View";
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			files = (
 				4FA57AF0251B4CFF000F9DF4 /* LaunchScreen.storyboard in Resources */,
 				4FA57AED251B4CFF000F9DF4 /* Assets.xcassets in Resources */,
+				4FA57AFA251B52D6000F9DF4 /* CustomTableViewCell.xib in Resources */,
 				4FA57AEB251B4CFC000F9DF4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			files = (
 				4FA57AE8251B4CFC000F9DF4 /* ViewController.swift in Sources */,
 				4FA57AE4251B4CFC000F9DF4 /* AppDelegate.swift in Sources */,
+				4FA57AF9251B52D6000F9DF4 /* CustomTableViewCell.swift in Sources */,
 				4FA57AE6251B4CFC000F9DF4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
