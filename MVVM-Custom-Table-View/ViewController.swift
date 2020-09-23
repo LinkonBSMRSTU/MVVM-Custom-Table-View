@@ -8,13 +8,46 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet var tableView: UITableView!
+    
+    var data = [
+        
+        Person(firstName: "First", lastName: "User", gender: "Male", age: 25, height: 166),
+        Person(firstName: "Second", lastName: "User", gender: "Female", age: 24, height: 164),
+        Person(firstName: "Third", lastName: "User", gender: "Female", age: 24, height: 160)
+    
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = data[indexPath.row].firstName
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
 
-
+struct Person {
+    let firstName: String
+    let lastName: String
+    let gender: String
+    let age: Int
+    let height: Double
 }
 
