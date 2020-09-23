@@ -34,7 +34,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.row].firstName
+        
+        let model = data[indexPath.row]
+        let viewModel = CellViewModel(firstName: model.firstName, lastName: model.lastName)
+        
+        cell.textLabel?.text = "\(viewModel.firstName) \(viewModel.lastName)"
         return cell
     }
     
@@ -49,5 +53,10 @@ struct Person {
     let gender: String
     let age: Int
     let height: Double
+}
+
+struct CellViewModel {
+    let firstName: String
+    let lastName: String
 }
 
